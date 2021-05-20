@@ -3,6 +3,8 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Title from "../components/Title"
 import Image from "gatsby-image"
+import SEO from "../components/SEO"
+
 export const query = graphql`
   {
     about: allStrapiAbout {
@@ -31,6 +33,7 @@ const About = ({ data }) => {
   const { title, info, stack, image } = nodes[0]
   return (
     <Layout>
+      <SEO title="About Me" description="This is about page" />
       <section className="about-page">
         <div className="section-center about-center">
           <Image fluid={image.childImageSharp.fluid} className="about-img" />

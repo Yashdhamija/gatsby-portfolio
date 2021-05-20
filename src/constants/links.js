@@ -1,5 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+
+const resume_link =
+  "https://yashdhamija.github.io/portfolio/YashDhamija_Resume.pdf"
 const data = [
   {
     id: 1,
@@ -26,6 +29,11 @@ const data = [
     text: "contact",
     url: "/contact/",
   },
+  // {
+  //   id: 4,
+  //   text: "Resume",
+  //   url: "https://yashdhamija.github.io/portfolio/YashDhamija_Resume.pdf",
+  // },
 ]
 
 export default ({ styleClass, toggleSidebar }) => {
@@ -43,6 +51,11 @@ export default ({ styleClass, toggleSidebar }) => {
   return (
     <ul className={`page-links ${styleClass ? styleClass : ""}`}>
       {tempLinks}
+      <li>
+        <a href={resume_link} target="_blanf" rel="noreferrer">
+          Resume
+        </a>
+      </li>
     </ul>
   )
 }
